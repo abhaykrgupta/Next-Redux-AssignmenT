@@ -17,16 +17,18 @@ const ProductList = () => {
     <ul className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
       {filteredItems.map((item) => (
         <li
-          className="bg-white rounded-lg shadow-lg p-4 border border-gray-200   hover:shadow-xl hover:border-gray-500 cursor-pointer "
+          className="bg-white rounded-lg shadow-lg p-4 border border-gray-200  hover:shadow-xl hover:border-gray-500 cursor-pointer "
           key={item.id}
-          onClick={() => console.log(`Clicked on: ${item.title}`)} // Replace with your click handler logic
+          
         >
           <h2 className="text-lg font-semibold mb-2">{item.title}</h2>
+          <div className='flex justify-center mb-2'>
           <img
             src={item.thumbnail}
             alt={item.title}
-            className="w-full h-48 object-cover rounded-md mb-2"
+            className="w-48 h-48  rounded-md mb-2"
           />
+          </div>
           <p className="text-gray-700 mb-1">{item.description}</p>
           <p className="font-bold mb-1">
             Price: <span className="text-green-600">${item.price.toFixed(2)}</span>

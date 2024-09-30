@@ -4,7 +4,7 @@ import { setCategory } from '@/redux/store/productsSlice';
 const CategoryFilter = () => {
   const dispatch = useDispatch();
   const selectedCategory = useSelector((state) => state.products.selectedCategory);
-  const categories = ["All", "beauty", "fragrances",]; {/* if needed we can create more categories*/}
+  const categories = ["All", "beauty", "fragrances", "furniture", "groceries"]; {/* if needed we can create more categories*/}
 
   return (
     <div className="mb-4">
